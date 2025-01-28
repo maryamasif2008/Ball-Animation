@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .line {
+    width: 130px;
+    height: 2px;
+    background-color: #504b4b; /* Line color */
+    box-shadow: 0 2px 10px gray;
+    position: absolute;
+    top: 90px; /* Line ke neeche ball ko align karne ke liye */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .ball {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(236, 26, 173);
+    box-shadow: 0 0 9px 9px rgb(83, 19, 57);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s ease-in-out infinite;
+  }
+  
+  /* Animation for bouncing */
+  @keyframes bounce {
+    0% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-150px); /* Ball will move up */
+    }
+    100% {
+      transform: translateX(-50%) translateY(0); /* Ball will move down */
+    }
+  }
+  
